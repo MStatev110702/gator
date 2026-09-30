@@ -16,3 +16,6 @@ SELECT
     name
 FROM users
 WHERE name = $1;
+
+-- name: ResetUser :exec
+DELETE FROM users;
