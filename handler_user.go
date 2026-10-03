@@ -14,12 +14,11 @@ func handlerRegister(s *state, cmd command) error {
 		return fmt.Errorf("usage %v <name>", cmd.Name)
 	}
 
-	user, err := s.db.CreateUser(context.Background(), 
-		database.CreateUserParams{
-			ID: uuid.New(), 
-			CreatedAt: time.Now(), 
-			UpdatedAt: time.Now(), 
-			Name: cmd.Args[0],
+	user, err := s.db.CreateUser(context.Background(), database.CreateUserParams{
+		ID: uuid.New(), 
+		CreatedAt: time.Now(), 
+		UpdatedAt: time.Now(), 
+		Name: cmd.Args[0],
 	})
 	if err != nil {
 		return fmt.Errorf("couldn't create user: %w", err)
