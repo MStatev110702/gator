@@ -1,9 +1,9 @@
 package main
 
 import (
-	"blogaggregator/internal/database"
 	"context"
 	"fmt"
+	"gator/internal/database"
 	"time"
 
 	"github.com/google/uuid"
